@@ -1,4 +1,4 @@
-package pokemon.view;
+package pokemon.controller;
 
 public class Controller 
 {
