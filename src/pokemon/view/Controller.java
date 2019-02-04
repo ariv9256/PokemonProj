@@ -1,5 +1,15 @@
 package pokemon.view;
 
-public class Controller {
+public class Controller 
+{
 
+	public Controller()
+	{
+		
+	}
+	public void start()
+	{
+		
+	}
+	
 }
