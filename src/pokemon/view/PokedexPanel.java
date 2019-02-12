@@ -10,9 +10,9 @@ public class PokedexPanel extends JPanel
 	private PokedexController pokedexApp;
 	private PokedexPanel pokedexPanel;
 	private SpringLayout appLayout;
+	private JComboBox<String> pokedexDropdown;
 	
 	private JTextField numberField;
-	private JTextField pokedexDropdown;
 	private JTextField nameField; 
 	private JTextField evolveField;
 	private JTextField attackField;
@@ -42,15 +42,35 @@ public class PokedexPanel extends JPanel
 		
 		healthLabel = new JLabel("This pokemon's health is: ");
 		numberLabel = new JLabel ("This pokemons' attack level is: ");
+		evolveLabel = new JLabel ("This is my pokemon's enhancement label");
+		nameLabel = new JLabel("My name is");
+		imageLabel = new JLabel("pokemon goes here");
+		changeButton = new JLabel("Click here to change values");
+		pokedexDropdown = new JComboBox<String>();//stub
+		
+		setupDropdown();
 		setupPanel();
 		setupLayout();
 		setupListeners();
+	}
+	private void setupDropdown()
+	{
+		DefaultComboBoxModel temp = new DefaultComboBoxModel(pokedexApp.buildPokedexText());
+		pokedexDropdown.setModel();
 	}
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
 		this.add(pokedexDropdown);
 		this.add(healthField);
+		this.add(numberField);
+		this.add(evolveField);
+		this.add(enhancementField);
+		this.add(attackField);
+		this.add(nameField);
+		
+		this.add(healthLabel);
+		this.add(numberLabel);
 	}
 	private void setupLayout()
 	{
