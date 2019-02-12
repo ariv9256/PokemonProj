@@ -5,14 +5,14 @@ import pokemon.controller.PokedexController;
 
 public class PokedexFrame extends JFrame
 {
-	private PokedexController pokedexController;
+	private PokedexController pokedexApp;
 	private PokedexPanel pokedexPanel;
 	
 	public PokedexFrame()
 	{
 		super();
-		this.pokedexController = pokedexController;
-		this.pokedexPanel = new PokedexPanel(pokedexController);
+		this.pokedexApp = pokedexApp;
+		this.pokedexPanel = new PokedexPanel(pokedexApp);
 		
 		setupFrame();
 	}
