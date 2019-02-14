@@ -28,7 +28,7 @@ public class PokedexController
 		pokemonList.add(new Absol(359, "ABSOLutely"));
 		pokemonList.add(new Charmander(4, "Fire boy"));
 		pokemonList.add(new Growlithe(58, "Smol tiger"));
-		pokemonList.add(new Vaporeon(134, "One of many eevee"));
+		pokemonList.add(new Vaporeon(134, "One Eeveolution"));
 		pokemonList.add(new Zorua(570, "Little floof"));
 	}
 	public void updatePokemon(int index, String[] data)
