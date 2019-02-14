@@ -12,12 +12,18 @@ public class Charmander extends Pokemon implements FireType
 	}
 	public int flamethrower()
 	{
-		
+		int flame = (int) (Math.random() * 40);
+		System.out.println("Fire boy did: " + flame + " flamethrower damage!");
 		return flamethrower();
 	}
 	public void inferno()
 	{
 		System.out.println("Fire boy used inferno!");
+	}
+	public String firespin()
+	{
+		System.out.println("Firespin did quite the damage!");
+		return firespin();
 	}
 
 }
