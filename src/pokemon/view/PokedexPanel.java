@@ -84,6 +84,33 @@ public class PokedexPanel extends JPanel
 	{
 		this.setLayout(appLayout);
 	}
+	private void sendDataToController()
+	{
+		int index = pokedexDropdown.getSelectedIndex();
+		
+		if(pokedexApp.isInt(attackField.getText()) && pokedexApp.isDouble(enhancementField.getText()) && pokedexApp.isInt(healthField.getText())
+		{
+			String [] data = new String[5];
+			
+			pokedexApp.updatePokemon(index, data);
+		}
+	}
+	private void changeImageDisplay(String name)
+	{
+		String path = "/pokemon/view/images/";
+		String defaultName = "ultraball";
+		String extension = ".png";
+		try 
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		catch(NullPointerException missingFile)
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		imageLabel.setIcon(pokemonIcon);
+		repaint();
+	}
 	private void setupListeners()
 	{
 		
