@@ -1,22 +1,23 @@
 package pokemon.model;
 
-public class Charmander 
+public class Charmander extends Pokemon implements FireType
 {
 	public Charmander()
 	{
 		super(4, "Fire boy");
 	}
-	public Charmander(int flamethrower, void inferno)
+	public Charmander(int num, String name)
 	{
-		super(flamethrower, inferno);
+		super(num, name);
 	}
 	public int flamethrower()
 	{
+		
 		return flamethrower();
 	}
 	public void inferno()
 	{
-		return inferno();
+		System.out.println("Fire boy used inferno!");
 	}
 
 }

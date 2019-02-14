@@ -54,7 +54,7 @@ public class PokedexController
 		}
 		return names;
 	}
-	public boolean validInt(String pokeInt)
+	public boolean isInt(String pokeInt)
 	{
 		boolean isValid = false;
 		
@@ -65,7 +65,22 @@ public class PokedexController
 		}
 		catch (NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null., "Please type in a real number trainer");
+			JOptionPane.showMessageDialog(null, "Please type in a real number trainer");
+		}
+		return isValid;
+	}
+	public boolean isDouble(String pokeDouble)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Double.parseDouble(pokeDouble);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "Please type in a decimal value");
 		}
 		return isValid;
 	}
