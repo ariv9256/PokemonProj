@@ -14,6 +14,7 @@ public class PokedexController
 	{
 		pokemonList = new ArrayList<Pokemon>(pokemonList);
 		addPokemon();
+		pokedexApp = new pokedexApp(this);
 	}
 	public void start()
 	{
@@ -38,7 +39,7 @@ public class PokedexController
 			Pokemon current = pokemonList.get(index);
 			current.setAttackPoints(Integer.parseInt(data[0]));
 			current.setEnhancementModifier(Double.parseDouble(data[1]));
-			current.setHealPoints(Integer.parseInt(data[2]));
+			current.setHealthPoints(Integer.parseInt(data[2]));
 			current.setName(data[3]);
 			current.setCanEvolve(Boolean.parseBoolean(data[4]));
 			
