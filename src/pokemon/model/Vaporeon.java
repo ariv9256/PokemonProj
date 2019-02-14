@@ -1,5 +1,10 @@
 package pokemon.model;
 
-public class Vaporeon {
+public class Vaporeon 
+{
+	public Vaporeon()
+	{
+		
+	}
 
 }

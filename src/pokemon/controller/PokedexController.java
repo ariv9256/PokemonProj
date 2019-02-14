@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 
 public class PokedexController 
 {
+	private ArrayList<Pokemon> pokemonList;
+	private PokedexFrame pokedexApp;
 
 	public PokedexController()
 	{

@@ -1,5 +1,10 @@
 package pokemon.model;
 
-public class Zorua {
+public class Zorua 
+{
+	public Zorua()
+	{
+		
+	}
 
 }

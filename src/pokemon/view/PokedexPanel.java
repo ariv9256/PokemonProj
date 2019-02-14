@@ -26,6 +26,9 @@ public class PokedexPanel extends JPanel
 	private JLabel enhanceLabel;
 	private JLabel healthLabel;
 	private JLabel imageLabel;
+	private JButton changeButton;
+	
+	private ImageIcon pokemonIcon;
 	
 	public PokedexPanel(PokedexController pokedexApp)
 	{
@@ -33,6 +36,8 @@ public class PokedexPanel extends JPanel
 		this.pokedexApp = pokedexApp;
 		
 		this.appLayout = new SpringLayout();
+		
+		this.pokemonIcon = new ImageIcon(getClass().getResource(""));
 		
 		numberField = new JTextField("0");
 		nameField = new JTextField("My pokename");
@@ -44,8 +49,8 @@ public class PokedexPanel extends JPanel
 		numberLabel = new JLabel ("This pokemons' attack level is: ");
 		evolveLabel = new JLabel ("This is my pokemon's enhancement label");
 		nameLabel = new JLabel("My name is");
-		imageLabel = new JLabel("pokemon goes here");
-		changeButton = new JLabel("Click here to change values");
+		imageLabel = new JLabel("pokemon goes here", pokemonIcon, JLabel.CENTER);
+		changeButton = new JButton("Click here to change values");
 		pokedexDropdown = new JComboBox<String>();//stub
 		
 		setupDropdown();
@@ -71,6 +76,9 @@ public class PokedexPanel extends JPanel
 		
 		this.add(healthLabel);
 		this.add(numberLabel);
+		
+		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
 	}
 	private void setupLayout()
 	{
