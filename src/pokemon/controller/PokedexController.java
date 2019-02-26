@@ -22,7 +22,7 @@ public class PokedexController
 	}
 	public void start()
 	{
-		
+		loadPokedex();
 	}
 	public ArrayList<Pokemon> getPokemonList()
 	{
@@ -32,6 +32,7 @@ public class PokedexController
 	{
 		pokemonList.add(new Absol(359, "ABSOLutely"));
 		pokemonList.add(new Charmander(4, "Fire boy"));
+		pokemonList.add(new DarkLion(101010, "Special"));
 		pokemonList.add(new Growlithe(58, "Smol tiger"));
 		pokemonList.add(new Vaporeon(134, "One Eeveolution"));
 		pokemonList.add(new Zorua(570, "Little floof"));
