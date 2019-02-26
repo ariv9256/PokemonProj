@@ -16,7 +16,7 @@ public class PokedexController
 
 	public PokedexController()
 	{
-		pokemonList = new ArrayList<Pokemon>(pokemonList);
+		pokemonList = new ArrayList<Pokemon>();
 		addPokemon();
 		pokedexApp = new PokedexFrame(this);
 	}

@@ -36,32 +36,28 @@ public class PokedexPanel extends JPanel
 	{
 		super();
 		this.pokedexApp = pokedexApp;
-		
 		this.appLayout = new SpringLayout();
 		
-		pokemonIcon = new ImageIcon(getClass().getResource(""));
+		this.pokemonIcon = new ImageIcon(getClass().getResource(""));
 		
 		numberField = new JTextField("0");
-		
 		nameField = new JTextField("My pokename");
-		
 		evolveField = new JTextField("false");
-		
 		enhancementField = new JTextField("0");
-		
 		healthField = new JTextField("0");
+		attackField = new JTextField("0");
 		
 		healthLabel = new JLabel("This pokemon's health is: ");
-		
 		numberLabel = new JLabel ("This pokemons' attack level is: ");
-		
 		evolveLabel = new JLabel ("This pokemon can evolve: ");
-		
 		nameLabel = new JLabel("My name is: ");
+		enhanceLabel = new JLabel("This pokemon's enhancement modifier is: ");
+		attackLabel = new JLabel("Attack points: " );
 		
 		imageLabel = new JLabel("pokemon goes here", pokemonIcon, JLabel.CENTER);
 		changeButton = new JButton("Click here to change values");
 		saveButton = new JButton("Save!");
+		
 		
 		pokedexDropdown = new JComboBox<String>();
 		
@@ -74,12 +70,12 @@ public class PokedexPanel extends JPanel
 	private void setupDropdown()
 	{
 		DefaultComboBoxModel temp = new DefaultComboBoxModel(pokedexApp.buildPokedexText());
-		pokedexDropdown.setModel();
+		pokedexDropdown.setModel(temp);
 	}
 	private void setupPanel()
 	{
 		this.setLayout(appLayout);
-		this.add(pokedexDropdown);
+
 		this.add(healthField);
 		this.add(numberField);
 		this.add(evolveField);
@@ -96,7 +92,9 @@ public class PokedexPanel extends JPanel
 		
 		this.add(changeButton);
 		this.add(saveButton);
+		this.add(pokedexDropdown);
 		
+		this.add(imageLabel);
 		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
 		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
 	}
@@ -138,7 +136,15 @@ public class PokedexPanel extends JPanel
 		{
 			String [] data = new String[5];
 			
+			data[0] = attackField.getText();
+			data[1] = enhancementField.getText();
+			data[2] = healthField.getText();
+			data[3] = nameField.getText();
+			data[4] = evolveField.getText();
+			data[5] = numberField.getText();
+			
 			pokedexApp.updatePokemon(index, data);
+			repaint();
 		}
 	}
 	private void changeImageDisplay(String name)
@@ -156,6 +162,17 @@ public class PokedexPanel extends JPanel
 		}
 		imageLabel.setIcon(pokemonIcon);
 		repaint();
+	}
+	private void updateFields(int index)
+	{
+		String[] data = pokedexApp.getPokeData(index);
+		attackField.setText(data[0]);
+		enhancementField.setText(data[1]);
+		healthField.setText(data[2]);
+		nameField.setText(data[3]);
+		evolveField.setText(data[4]);
+		numberField.setText(data[5]);
+		
 	}
 	private void setupListeners()
 	{
@@ -178,6 +195,7 @@ public class PokedexPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String name = pokedexDropdown.getSelectedItem().toString();
+				updateFields(pokedexDropdown.getSelectedIndex());
 				changeImageDisplay(name);
 			}
 		});
