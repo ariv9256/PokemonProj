@@ -14,7 +14,7 @@ public class PokedexController
 	{
 		pokemonList = new ArrayList<Pokemon>(pokemonList);
 		addPokemon();
-		pokedexApp = new pokedexApp(this);
+		pokedexApp = new PokedexFrame(this);
 	}
 	public void start()
 	{
@@ -44,6 +44,10 @@ public class PokedexController
 			current.setCanEvolve(Boolean.parseBoolean(data[4]));
 			
 		}
+	}
+	public PokedexFrame getFrame()
+	{
+		return pokedexApp;
 	}
 	public String[] buildPokedexText()
 	{

@@ -8,7 +8,7 @@ public class PokedexFrame extends JFrame
 	private PokedexController pokedexApp;
 	private PokedexPanel pokedexPanel;
 	
-	public PokedexFrame()
+	public PokedexFrame(PokedexController pokedexApp)
 	{
 		super();
 		this.pokedexApp = pokedexApp;

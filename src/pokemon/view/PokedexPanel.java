@@ -76,13 +76,19 @@ public class PokedexPanel extends JPanel
 		
 		this.add(healthLabel);
 		this.add(numberLabel);
+		this.add(nameLabel);
+		this.add(evolveLabel);
+		this.add(enhanceLabel);
+		this.add(attackLabel);
+		
+		this.add(changeButton);
 		
 		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
 		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
 	}
 	private void setupLayout()
 	{
-		this.setLayout(appLayout);
+		
 	}
 	private void sendDataToController()
 	{
@@ -113,7 +119,13 @@ public class PokedexPanel extends JPanel
 	}
 	private void setupListeners()
 	{
-		
+		changeButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent mouseClick)
+			{
+				sendDataToController();
+			}
+		});
 	}
 	
 }
