@@ -4,7 +4,7 @@ public class DarkLion extends Pokemon implements WaterType, DarkType
 {
 	public DarkLion()
 	{
-		super(101010, "DarkLion");
+		super(101010, "Special");
 	}
 	public DarkLion(int num, String name)
 	{

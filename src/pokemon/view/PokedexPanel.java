@@ -25,6 +25,7 @@ public class PokedexPanel extends JPanel
 	private JLabel attackLabel;
 	private JLabel enhanceLabel;
 	private JLabel healthLabel;
+	
 	private JLabel imageLabel;
 	private JButton changeButton;
 	private JButton saveButton;
@@ -38,9 +39,10 @@ public class PokedexPanel extends JPanel
 		
 		this.appLayout = new SpringLayout();
 		
-		this.pokemonIcon = new ImageIcon(getClass().getResource(""));
+		pokemonIcon = new ImageIcon(getClass().getResource(""));
 		
 		numberField = new JTextField("0");
+		
 		nameField = new JTextField("My pokename");
 		
 		evolveField = new JTextField("false");

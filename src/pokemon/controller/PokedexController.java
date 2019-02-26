@@ -54,6 +54,18 @@ public class PokedexController
 	{
 		return pokedexApp;
 	}
+	public String [] getPokeData(int index)
+	{
+		String [] data = new String[6];
+		Pokemon current = pokemonList.get(index);
+		data[0] = current.getAttackPoints() + "";
+		data[1] = current.getEnhancementModifier() + "";
+		data[2] = current.getHealthPoints() + "";
+		data[3] = current.getName() + "";
+		data[4] = current.isCanEvolve() + "";
+		data[5] = current.getNumber() + "";
+		return data;
+	}
 	public void savePokedex()
 	{
 		try
