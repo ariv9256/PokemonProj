@@ -19,7 +19,7 @@ public class PokedexFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setContentPane(pokedexPanel);
-		this.setSize(800, 800);
+		this.setSize(600, 450);
 		this.setTitle("GOTTA CATCH 'EM ALL");
 		this.setResizable(true);
 		this.setVisible(true);
