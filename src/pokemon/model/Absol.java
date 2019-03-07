@@ -4,7 +4,7 @@ public class Absol extends Pokemon implements DarkType
 {
 	public Absol()
 	{
-		super(359, "ABSOLutely");
+		super(359, "absolutely");
 	}
 	public Absol(int num, String name)
 	{

@@ -4,7 +4,7 @@ public class Growlithe extends Pokemon implements FireType
 {
 	public Growlithe()
 	{
-		super(58, "Smol tiger");
+		super(58, "smoltiger");
 	}
 	public Growlithe(int num, String name)
 	{

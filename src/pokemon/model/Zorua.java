@@ -4,7 +4,7 @@ public class Zorua extends Pokemon implements DarkType
 {
 	public Zorua()
 	{
-		super(570, "Little floof");
+		super(570, "littlefloof");
 	}
 	public Zorua(int num, String name)
 	{

@@ -4,7 +4,7 @@ public class Charmander extends Pokemon implements FireType
 {
 	public Charmander()
 	{
-		super(4, "Fire boy");
+		super(4, "fireboy");
 	}
 	public Charmander(int num, String name)
 	{

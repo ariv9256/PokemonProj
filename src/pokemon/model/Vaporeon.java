@@ -4,7 +4,7 @@ public class Vaporeon extends Pokemon implements WaterType
 {
 	public Vaporeon()
 	{
-		super(134, "One Eeveolution");
+		super(134, "oneeeveolution");
 	}
 	public Vaporeon(int num, String name)
 	{

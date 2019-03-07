@@ -30,12 +30,12 @@ public class PokedexController
 	}
 	public void addPokemon()
 	{
-		pokemonList.add(new Absol(359, "ABSOLutely"));
-		pokemonList.add(new Charmander(4, "Fire boy"));
-		pokemonList.add(new DarkLion(101010, "Special"));
-		pokemonList.add(new Growlithe(58, "Smol tiger"));
-		pokemonList.add(new Vaporeon(134, "One Eeveolution"));
-		pokemonList.add(new Zorua(570, "Little floof"));
+		pokemonList.add(new Absol(359, "absolutely"));
+		pokemonList.add(new Charmander(4, "fireboy"));
+		pokemonList.add(new DarkLion(101010, "special"));
+		pokemonList.add(new Growlithe(58, "smoltiger"));
+		pokemonList.add(new Vaporeon(134, "oneeeveolution"));
+		pokemonList.add(new Zorua(570, "littlefloof"));
 	}
 	public void updatePokemon(int index, String[] data)
 	{

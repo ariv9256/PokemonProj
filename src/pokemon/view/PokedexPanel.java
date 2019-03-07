@@ -38,7 +38,7 @@ public class PokedexPanel extends JPanel
 		this.pokedexApp = pokedexApp;
 		this.appLayout = new SpringLayout();
 		
-		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/image/masterball.png"));
+		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/masterball.png"));
 		
 		numberField = new JTextField("0");
 		nameField = new JTextField("My pokename");
@@ -162,7 +162,6 @@ public class PokedexPanel extends JPanel
 			data[2] = healthField.getText();
 			data[3] = nameField.getText();
 			data[4] = evolveField.getText();
-			data[5] = numberField.getText();
 			
 			pokedexApp.updatePokemon(index, data);
 			repaint();
@@ -171,11 +170,11 @@ public class PokedexPanel extends JPanel
 	private void changeImageDisplay(String name)
 	{
 		String path = "/pokemon/view/images/";
-		String defaultName = "ultraball";
+		String defaultName = "masterball";
 		String extension = ".png";
 		try 
 		{
-			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+			pokemonIcon = new ImageIcon(getClass().getResource(path + name+ extension));
 		}
 		catch(NullPointerException missingFile)
 		{
